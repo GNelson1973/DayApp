@@ -1,5 +1,7 @@
-%h1= @day.date
-%h1= @day.inspiration
-%h1= @day.challenge
-
+%h1= @day.date.strftime("%A %d %B %Y")
+%h3 Inspiration
+=@day.inspiration
+%h3 Challenge
+=@day.challenge
+%p
 = link_to "All days", days_path
