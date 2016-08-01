@@ -1,5 +1,8 @@
 = simple_form_for @day do |f|
-  = f.input :date, label: "Date"
-  = f.input :inspiration, label: "Your inspiration for today"
-  = f.input :challenge, label: "Your challenge for today"
+  = f.input :date
+  = f.input :challenge, label: "Today's Challenge"
+  = f.input :inspiration, label: "Today's Inspiration"
   = f.button :submit
+  %br/
+  %br/
+  = link_to "Cancel", days_path
