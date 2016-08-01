@@ -22,14 +22,20 @@ class DaysController < ApplicationController
     end
   end
 
-  def
-     edit
+  def edit
   end
 
   def update
+    if @day.update(day_params)
+      redirect_to @day
+    else
+      render "edit"
+    end
   end
 
   def destroy
+    @day.destroy
+    redirect_to days_path
   end
 
   private

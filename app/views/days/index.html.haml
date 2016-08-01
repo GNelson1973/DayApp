@@ -1,3 +1,5 @@
 - @days.each do |day|
   %h2= link_to day.date.strftime("%A %d %B %Y"), day
   %p= day.inspiration
+
+= link_to "New Day", new_day_path
