@@ -1,18 +1,29 @@
 class DaysController < ApplicationController
+  before_action :find_day, only: [:show, :edit, :update, :destroy]
 
   def index
+    @days = Day.all.order("created_at DESC")
   end
 
   def show
   end
 
   def new
+    @day = Day.new
   end
 
   def create
+    @day = Day.new(day_params)
+
+    if @day.save
+      redirect_to @day
+    else
+      render 'new'
+    end
   end
 
-  def edit
+  def
+     edit
   end
 
   def update
@@ -24,9 +35,11 @@ class DaysController < ApplicationController
   private
 
     def find_day
+      @day = Day.find(params[:id])
     end
 
     def day_params
+      params.require(:day).permit(:inspiration, :challenge, :date)
     end
 
 end
