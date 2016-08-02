@@ -1,0 +1,22 @@
+
+.container {
+  margin-top: 55px;
+  width: 800px;
+  float: left;
+}
+
+.panel-heading {
+  padding-left: 35px;
+}
+
+.panel-body {
+  padding: 35px;
+  h1 {
+    margin: 0 0 10px 0;
+  }
+  .description {
+    color: #868686;
+    line-height: 1.75;
+    margin: 0;
+  }
+}

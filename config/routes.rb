@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  devise_for :users
+  resources :days
+
+  authenticated :user do
+    root 'days#index', as: "authenticated_root"
+  end
 
   root 'welcome#index'
 
-  resources :days
 end

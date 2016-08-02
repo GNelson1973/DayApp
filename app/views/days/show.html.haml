@@ -1,0 +1,9 @@
+-# %h1= @day.date.strftime("%A %d %B %Y")
+%h3 Inspiration
+=@day.inspiration
+%h3 Challenge
+=@day.challenge
+%p
+
+= link_to "Edit", edit_day_path(@day)
+= link_to "Delete", day_path(@day), method: :delete, data: { confirm: "Are you sure?" }

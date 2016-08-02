@@ -1,0 +1,3 @@
+- @days.each do |day|
+  %h2= link_to day.date.strftime("%A %d %B %Y"), day
+  %p= day.challenge
