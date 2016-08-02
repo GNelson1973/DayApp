@@ -4,6 +4,6 @@
 %h3 Challenge
 =@day.challenge
 %p
-= link_to "All days", days_path
+
 = link_to "Edit", edit_day_path(@day)
 = link_to "Delete", day_path(@day), method: :delete, data: { confirm: "Are you sure?" }
