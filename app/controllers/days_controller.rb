@@ -9,11 +9,11 @@ class DaysController < ApplicationController
   end
 
   def new
-    @day = Day.new
+    @day = current_user.days.build
   end
 
   def create
-    @day = Day.new(day_params)
+    @day = current_user.days.build(day_params)
 
     if @day.save
       redirect_to @day
