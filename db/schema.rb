@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160803082550) do
+ActiveRecord::Schema.define(version: 20160803085945) do
 
   create_table "days", force: :cascade do |t|
     t.string   "inspiration"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20160803082550) do
     t.integer  "meditation"
     t.text     "insight"
     t.decimal  "kg",               precision: 5, scale: 1
+    t.integer  "actual_push_ups"
   end
 
   create_table "users", force: :cascade do |t|
