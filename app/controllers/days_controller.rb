@@ -2,7 +2,7 @@ class DaysController < ApplicationController
   before_action :find_day, only: [:show, :edit, :update, :destroy]
 
   def index
-    @days = Day.where(user_id: current_user).order("date DESC")
+    @days = Day.where(user_id: current_user).order("created_at DESC")
   end
 
   def show
@@ -45,7 +45,7 @@ class DaysController < ApplicationController
     end
 
     def day_params
-      params.require(:day).permit(:inspiration, :challenge, :date)
+      params.require(:day).permit(:inspiration, :challenge, :date, :push_up, :abdominal_crunch, :leg_Scissors, :kg, :meditation, :insight, :walk_run)
     end
 
 end

@@ -1,9 +1,21 @@
--# %h1= @day.date.strftime("%A %d %B %Y")
-%h3 Inspiration
-=@day.inspiration
-%h3 Challenge
-=@day.challenge
-%p
-
-= link_to "Edit", edit_day_path(@day)
-= link_to "Delete", day_path(@day), method: :delete, data: { confirm: "Are you sure?" }
+.container-fluid
+  %h2
+    =@day.date.strftime("%A %B %d")
+  %h3
+    =@day.date.strftime("%Y")
+  %br/
+  %h4= "My Day Challenge: " + @day.challenge
+  %h4= "Inspiration - " + @day.inspiration + " -"
+  %br/
+  %h3= "Physical day goals "
+  %p= "Current Weigth- " + "#{@day.kg.round(2)}" + " Kg"
+  %p= "Push ups- " + @day.push_up.to_s + " Times"
+  %p= "Abdominal Crunches- " + @day.abdominal_crunch.to_s + " Times"
+  %p= "walk or run- " + @day.walk_run.to_s + " Minutes"
+  %br/
+  %h3= "Mental day goals "
+  %p= "Meditation- " + @day.meditation.to_s + " Minutes"
+  %p= "Insight- " + @day.insight.to_s
+  %br/
+  = link_to "Edit", edit_day_path(@day)
+  = link_to "Delete", day_path(@day), method: :delete, data: { confirm: "Are you sure?" }
