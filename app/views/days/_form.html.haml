@@ -1,7 +1,14 @@
 = simple_form_for @day do |f|
   = f.input :date, :as => :hidden, :input_html => { :value => Date.today}
-  = f.input :challenge, label: "My Challenge For Today"
-  = f.input :inspiration, label: "My Inspiration For Today"
+  = f.input :challenge, label: "My Challenge For Today", hint: 'Put in one sentence any challenge you see for Today', input_html: { class: "form-control"}
+  = f.input :inspiration, label: "My Inspiration For Today", hint: 'Visualize in one sentence an inspiration for this day', input_html: { class: "form-control"}
+  = f.input :kg, value: number_with_precision(f.object.kg, precision: 2)
+  = f.input :push_up, label: "Goal for no. push ups", input_html: { class: "form-control"}
+  = f.input :abdominal_crunch, label: "Goal for no. abdominal crunches", input_html: { class: "form-control"}
+  = f.input :leg_Scissors, label: "Goal for no. leg scissors", input_html: { class: "form-control"}
+  = f.input :walk_run, label: "Goal for walking or running", hint: 'In minutes', input_html: { class: "form-control"}
+  = f.input :meditation, label: "Goal for meditation", hint: 'In minutes', input_html: { class: "form-control"}
+  = f.input :insight, label: "Insight", hint: 'Did you have any new insights during the day?', input_html: { class: "form-control"}
   = f.button :submit
   %br/
   %br/

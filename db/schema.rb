@@ -11,15 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160802073540) do
+ActiveRecord::Schema.define(version: 20160803085945) do
 
   create_table "days", force: :cascade do |t|
     t.string   "inspiration"
     t.string   "challenge"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.datetime "date"
     t.integer  "user_id"
+    t.integer  "push_up"
+    t.integer  "abdominal_crunch"
+    t.integer  "leg_Scissors"
+    t.integer  "walk_run"
+    t.integer  "meditation"
+    t.text     "insight"
+    t.decimal  "kg",               precision: 5, scale: 1
+    t.integer  "actual_push_ups"
   end
 
   create_table "users", force: :cascade do |t|
