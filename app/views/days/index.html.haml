@@ -1,10 +1,18 @@
-%p#intro
-  %br
-  hello
-  = current_user.name
+%p#intro_time
+  = Time.now.strftime("%I:%M")
+%p#intro<
+  Good
+  - if Time.now.hour < 12
+    morning,
+  - elsif Time.now.hour > 18
+    evening,
+  - else
+    afternoon,
+  = current_user.name.capitalize
+  \.
   %br/
   %span
-    Share your inspiration and see what inspires others.
+    Create your day and add your inspirations.
 
 #posts
   -# - @posts.each do |post|

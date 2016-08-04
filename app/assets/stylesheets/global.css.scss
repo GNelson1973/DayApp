@@ -81,6 +81,15 @@ header {
 			color: white;
 			text-decoration: none;
 		}
+		#time {
+			display: inline-block;
+	    width: 22rem;
+	    float: left;
+	    font-size: 1.6rem;
+	    margin-left: 60px;
+	    color: white;
+	    margin-top: 7px
+		}
 		nav {
 			float: right;
 			a {

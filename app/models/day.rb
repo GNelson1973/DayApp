@@ -15,4 +15,15 @@ class Day < ActiveRecord::Base
     end
   end
 
+  def day_period
+    # t = Time.now
+    return Time.now
+  #   if t.hour < 12
+  #     "morning"
+  #   elsif t.hour > 12
+  #     "evening"
+  #   else
+  #     "afternoon"
+  #   end
+  end
 end
