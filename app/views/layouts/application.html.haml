@@ -8,7 +8,7 @@
 %body
 	%header
 		.header_inner
-			= link_to image_tag( 'day.jpg'), root_path, id: "logo"
+			= link_to "DayApp", root_path, id: "logo"
 			%nav
 				- if user_signed_in?
 					= link_to "New Day", new_day_path
