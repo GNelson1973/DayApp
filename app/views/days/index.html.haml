@@ -1,3 +1,30 @@
-- @days.each do |day|
-  %h2= link_to day.created_at.strftime("%A %d %B %Y"), day
-  %p= day.challenge
+%p#intro
+  %br
+  hello
+  = current_user.name
+  %br/
+  %span
+    Share your inspiration and see what inspires others.
+
+#posts
+  -# - @posts.each do |post|
+  - @days.each do |day|
+    .post
+      .post_image
+        -# = link_to (image_tag post.image, {:class => "img_small"}), post
+        = link_to day.created_at.strftime("%A %d %B %Y"), day
+        p= day.challenge
+      -# .post_content
+      -#   .title
+      -#     %h2= link_to post.title, post
+      -#   .data.clearfix
+      -#     %p.username
+      -#       Shared by
+      -#       = post.user.name
+      -#     %p.buttons
+      -#       %span
+      -#         %i.fa.fa-comments-o
+      -#         = pluralize(post.comments.count, "comment")
+      -#       %span
+      -#         %i.fa.fa-thumbs-o-up
+      -#         = pluralize(post.get_upvotes.size, "like")
