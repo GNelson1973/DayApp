@@ -10,7 +10,10 @@
     %br/
     %h3= "Physical day goals "
     %p= "Current Weigth- " + "#{@day.kg.round(2)}" + " Kg"
-    %p= "Push up goal: " + @day.push_up.to_s + " Push up actual: " + @day.actual_push_ups.to_s + " Status: " + @day.push_up_result.to_s
+    - if @day.actual_push_ups.blank?
+      Push up: No actuals yet
+    - else
+      %p= "Push up goal: " + @day.push_up.to_s + " Push up actual: " + @day.actual_push_ups.to_s + " Status: " + @day.push_up_result.to_s
     %p= "Abdominal Crunches- " + @day.abdominal_crunch.to_s + " Times"
     %p= "walk or run- " + @day.walk_run.to_s + " Minutes"
     %br/
