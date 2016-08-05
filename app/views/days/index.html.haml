@@ -1,19 +1,4 @@
-%p#intro<
-  Good
-  - if Time.now.hour < 12
-    morning,
-  - elsif Time.now.hour > 18
-    evening,
-  - else
-    afternoon,
-  = current_user.name.capitalize
-  \.
-  %br/
-  %span
-    Create your day!
-
 #posts
-  -# - @posts.each do |post|
   - @days.each do |day|
     .post
       .post_image

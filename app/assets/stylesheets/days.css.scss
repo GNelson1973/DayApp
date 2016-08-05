@@ -15,28 +15,50 @@
 	}
 }
 
-#days {
-	.day {
-		background: $dark_gray;
+#posts {
+	.post {
+		background: #F8F9FA;
 		width: 30%;
-		min-height: 150px;
-		margin: 1rem 1%;
-		padding: 1.5rem 2.5%;
 		float: left;
-		border-radius: .4rem;
-		position: relative;
-		.challenge {
-			@include bold_font;
-			color: white;
-			margin: 0;
-			letter-spacing: 1px;
+		margin: 5rem 1.5%;
+		border: 1px solid #E4E4E4;
+		border-radius: 0.3rem;
+		.post_image {
+			height: 200px;
+			overflow: hidden;
 		}
-		.date {
-			position: absolute;
-			bottom: .25rem;
-			left: 8.5%;
-			color: $green;
-			font-size: .85rem;
+		.post_content {
+			h2 {
+				margin: 0;
+				font-weight: 100;
+				padding: 1rem 5%;
+				border-bottom: 1px solid #E4E4E4;
+				font-size: 1.25rem;
+				a {
+					text-decoration: none;
+					color: #333233;
+					&:hover {
+						color: #50A7C7;
+					}
+				}
+			}
+			.data {
+				padding: .75rem 5%;
+				color: #969696;
+				.username, .buttons {
+					margin: 0;
+					font-size: .8rem;
+				}
+				.username {
+					float: left;
+				}
+				.buttons {
+					float: right;
+					span {
+						margin-left: .5rem;
+					}
+				}
+			}
 		}
 	}
 }
@@ -59,7 +81,7 @@
 			padding: .5rem 2rem;
 			border-radius: 2rem;
 			text-decoration: none;
-			color: $green;
+			color: $yellow;
 			border: 5px solid #E9E9E9;
 			@include bold_font;
 			background: transparent;

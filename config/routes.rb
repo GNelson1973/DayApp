@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :days
 
   authenticated :user do
-    root 'days#index', as: "authenticated_root"
+    root 'days#intro', as: "authenticated_root"
   end
 
   root 'welcome#index'
