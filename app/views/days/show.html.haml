@@ -20,9 +20,8 @@
     %h3= "Mental day goals "
     %p= "Meditation- " + @day.meditation.to_s + " Minutes"
     %p= "Insight- " + @day.insight.to_s
-  .day-actuals
-
-  = render 'actuals_form'
   %br/
-  = link_to "Edit", edit_day_path(@day)
-  = link_to "Delete", day_path(@day), method: :delete, data: { confirm: "Are you sure?" }
+  %p= link_to "Edit", edit_day_path(@day)
+  %p= link_to "Delete", day_path(@day), method: :delete, data: { confirm: "Are you sure?" }
+  .day-actuals
+  = render 'actuals_form'
