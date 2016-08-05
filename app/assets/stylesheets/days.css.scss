@@ -9,32 +9,39 @@
 		float: left;
 		margin: 5rem 1.5%;
 		border: 1px solid #E4E4E4;
-		border-radius: 0.3rem;
+		// border-top-left-radius: 1rem;
+		// border-top-right-radius: 1rem;
+		border-radius: 0.6rem 0.6rem 0.4rem 0.4rem;
 		.post_image {
-			height: 200px;
+			max-height: 200px;
 			overflow: hidden;
+			border-top-left-radius: 0.6rem;
+			border-top-right-radius: 0.6rem;
+		}
+		.image_tag_listing {
+			max-width: 100%;
 		}
 		.post_content {
 			h2 {
 				margin: 0;
-				font-weight: 100;
+				font-weight: 200;
 				padding: 1rem 5%;
 				border-bottom: 1px solid #E4E4E4;
-				font-size: 1.25rem;
+				font-size: 2.25rem;
 				a {
 					text-decoration: none;
 					color: #333233;
 					&:hover {
-						color: #50A7C7;
+						color: #41a0c3;
 					}
 				}
 			}
 			.data {
 				padding: .75rem 5%;
-				color: #969696;
+				color: #8c8c8c;
 				.username, .buttons {
 					margin: 0;
-					font-size: .8rem;
+					font-size: 1.5rem;
 				}
 				.username {
 					float: left;
