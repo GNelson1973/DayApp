@@ -1,15 +1,15 @@
 .container-fluid
   .day-goals
     %h2
-      =@day.date.strftime("%A %B %d")
-    %h3
-      =@day.date.strftime("%Y")
-    %br/
-    %h4= "My Challenge: " + @day.challenge
-    %h4= "Today's Inspiration - " + @day.inspiration + " -"
+      =@day.date.strftime("%A %B %e")
+    %h4
+      = "Day Challenge - " + @day.challenge
+      %br/
+      = "Inspiration Quote - " + @day.inspiration
+      %br/
+      = "Weigth - " + "#{@day.kg.round(2)}" + " Kg"
     %br/
     %h3= "Physical day goals "
-    %p= "Current Weigth- " + "#{@day.kg.round(2)}" + " Kg"
     - if @day.actual_push_ups.blank?
       Push up: No actuals yet
     - else
