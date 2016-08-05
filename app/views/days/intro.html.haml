@@ -1,4 +1,4 @@
-%p#intro<
+#intro<
   Good
   - if Time.now.hour < 12
     morning,
@@ -9,5 +9,5 @@
   = current_user.name.capitalize
   \.
   %br/
-  %span
-    Create your day!
+  %span#button-intro
+    = link_to "Create Your Day", new_day_path
