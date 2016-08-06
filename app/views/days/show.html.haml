@@ -9,19 +9,45 @@
       %br/
       = "Weigth - " + "#{@day.kg.round(2)}" + " Kg"
     %br/
-    %h3= "Physical day goals "
-    - if @day.actual_push_ups.blank?
-      Push up: No actuals yet
-    - else
-      %p= "Push up goal: " + @day.push_up.to_s + " Push up actual: " + @day.actual_push_ups.to_s + " Status: " + @day.push_up_result.to_s
-    %p= "Abdominal Crunches- " + @day.abdominal_crunch.to_s + " Times"
-    %p= "walk or run- " + @day.walk_run.to_s + " Minutes"
-    %br/
-    %h3= "Mental day goals "
-    %p= "Meditation- " + @day.meditation.to_s + " Minutes"
-    %p= "Insight- " + @day.insight.to_s
-  %br/
-  %p= link_to "Edit", edit_day_path(@day)
-  %p= link_to "Delete", day_path(@day), method: :delete, data: { confirm: "Are you sure?" }
-  .day-actuals
-  = render 'actuals_form'
+
+.day-elements
+  %nav
+    %ul
+      %li.menu
+        %h3 Goals
+        %ul.list-items
+          %li= "Meditation" + @day.meditation.to_s
+          %li Push ups
+          %li Abdominal Crunches
+          %li Abdominal scissors
+          %li Walking or running
+      %li.menu
+        %h3 Evaluations
+        %ul.list-items
+          %li Meditation
+          %li= @day.actual_push_ups.to_s
+          %li Abdominal Crunches
+          %li Abdominal scissors
+          %li Walking or running
+  -# %h4
+  -# - if @day.actual_push_ups.blank?
+  -#   Push up: No actuals yet
+  -# - else
+  -#   %p= "Push up goal: " + @day.push_up.to_s + " Push up actual: " + @day.actual_push_ups.to_s + " Status: " + @day.push_up_result.to_s
+  -# %p= "Abdominal Crunches- " + @day.abdominal_crunch.to_s + " Times"
+  -# %p= "walk or run- " + @day.walk_run.to_s + " Minutes"
+  -# -# %li.h3= "Mental goals "
+  -# %p= "Meditation- " + @day.meditation.to_s + " Minutes"
+  -# %p= "Insight- " + @day.insight.to_s
+  -# %br/
+  -# .day-actuals
+  -# = render 'actuals_form'
+#intro<
+  %span#button-intro
+    = link_to "Set Goals", new_day_path
+  %span#button-intro
+    = link_to "Add Results", edit_day_path(@day)
+  %span#button-intro
+    = link_to "Edit", edit_day_path(@day)
+  %span#button-intro
+    = link_to "Delete", day_path(@day), method: :delete, data: { confirm: "Are you sure?" }

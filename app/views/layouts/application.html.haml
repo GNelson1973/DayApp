@@ -8,8 +8,8 @@
 %body
 	%header
 		.header_inner
-			= link_to "DayApp", root_path, id: "logo"
-			#time= Time.now.strftime("%a %b %d '%y")
+			= link_to "MyDay", root_path, id: "logo"
+			#time= Time.now.strftime("%a %b %e '%y")
 			%nav
 				- if user_signed_in?
 					= link_to "Overview", days_path

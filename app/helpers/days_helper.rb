@@ -8,4 +8,9 @@ module DaysHelper
     end
   end
 
+  def current_day?
+    @day = Day.where(user_id: current_user)
+    @day.last[:date] == Date.today
+  end
+
 end

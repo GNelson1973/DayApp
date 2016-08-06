@@ -2,9 +2,9 @@
   = f.input :date, :as => :hidden, :input_html => { :value => Date.today}
   = f.input :challenge, label: "My Challenge For Today", input_html: { class: "form-control"}
   = f.input :inspiration, label: "My Inspiration For Today", input_html: { class: "form-control"}
-  = f.input :image_name, label: "Inspirational picture | url only", placeholder: ". . . Url ending on .jpg, jpeg, png", input_html: { class: "form-control"}
-  = f.input :kg, value: number_with_precision(f.object.kg, precision: 2), label: "Kg", placeholder: "example: 80,2"
-  = f.button :submit
+  = f.input :image_name, label: "Inspirational picture | url only", placeholder: "add url of picture", input_html: { class: "form-control"}
+  = f.input :kg, value: number_with_precision(f.object.kg, precision: 2), label: "Kg", placeholder: "e.g. 80,2"
+  = f.button :submit, class: "btn btn-secondary"
+  - if Day.last[:date] == Date.today
+    = link_to "Back", day_path, class: "btn btn-primary"
   %br/
-  %br/
-  = link_to "Cancel", days_path

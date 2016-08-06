@@ -3,4 +3,6 @@
     .panel-heading
       %h2 Create A New Day
       %br/
+      %h4= Date.today.strftime("%A %e %B %Y")
+      %br/
       = render 'form'

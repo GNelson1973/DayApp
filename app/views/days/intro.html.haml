@@ -1,13 +1,30 @@
-#intro<
-  Good
-  - if Time.now.hour < 12
-    morning,
-  - elsif Time.now.hour > 18
-    evening,
-  - else
-    afternoon,
-  = current_user.name.capitalize
-  \.
-  %br/
-  %span#button-intro
-    = link_to "Create Your Day", new_day_path
+- if current_day?
+  #intro<
+    Good
+    - if Time.now.hour < 12
+      morning,
+    - elsif Time.now.hour > 17
+      evening,
+    - else
+      afternoon,
+    = current_user.name.capitalize
+    \.
+    %br/
+    %h4
+      = render 'days/show'
+    %span#button-intro
+      = link_to "Enter Your Day", day_path(Day.last)
+- else
+  #intro<
+    Good
+    - if Time.now.hour < 12
+      morning,
+    - elsif Time.now.hour > 18
+      evening,
+    - else
+      afternoon,
+    = current_user.name.capitalize
+    \.
+    %br/
+    %span#button-intro
+      = link_to "Create Your Day", new_day_path

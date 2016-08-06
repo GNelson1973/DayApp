@@ -1,9 +1,10 @@
-.container
-  .col-md-8.col-md-offset-2
-    .row
-      .panel.panel-default
-        .panel-heading
-          %h2 Edit Your Day
-          %p= @day.created_at.strftime("%A %d %B %Y")
-          %br/
-          = render 'form'
+- if !Day.last[:date].blank?
+  .container
+    .col-md-8.col-md-offset-2
+      .row
+        .panel.panel-default
+          .panel-heading
+            %h2 Edit Your Day
+            -# %p= @day.created_at.strftime("%A %d %B %Y")
+            %br/
+            = render 'form'

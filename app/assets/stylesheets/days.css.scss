@@ -12,8 +12,59 @@
 		font-weight: 200;
 		line-height: 2.5rem;
 	}
+	.show_list {
+
+		width: 200px;
+	}
 }
 
+.day-elements nav {
+	margin-top: 50px;
+	margin-left: 20vw;
+	ul {
+		padding: 0;
+		margin: 0;
+		height: 200px;
+		margin-left: 15px;
+		li.menu {
+			list-style: none;
+			float: left;
+			margin-right: 60px;
+			background-color: lighten(#41a0c3, 35%);
+			width: 250px;
+			border-radius: 10px;
+			border: lighten(#41a0c3, 33%) 3px solid;
+			h3 {
+				margin-top: 8px;
+				margin-left: 15px;
+				font-weight: 400;
+				font-size: 30px;
+			}
+			ul.list-items {
+				li {
+					text-align: left;
+					list-style: none;
+					font-size: 20px;
+					font-weight: 300;
+				}
+		}
+		}
+	}
+}
+
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+.group {
+	zoom: 1;
+}
 
 #posts {
 	.post {
@@ -22,8 +73,6 @@
 		float: left;
 		margin: 5rem 1.5%;
 		border: 1px solid #E4E4E4;
-		// border-top-left-radius: 1rem;
-		// border-top-right-radius: 1rem;
 		border-radius: 0.6rem 0.6rem 0.4rem 0.4rem;
 		.post_image {
 			max-height: 200px;

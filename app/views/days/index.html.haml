@@ -6,10 +6,10 @@
         -# %p= day.challenge
       .post_content
         .title
-          %h2= link_to day.created_at.strftime("%A %d %B %Y"), day
+          %h2= link_to day.created_at.strftime("%A %e %B %Y"), day
         .data.clearfix
           %p.username
-            Shared by
+            Created by
             = day.user.name
         -#   %p.buttons
         -#     %span
