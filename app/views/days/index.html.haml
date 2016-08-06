@@ -1,3 +1,20 @@
-- @days.each do |day|
-  %h2= link_to day.created_at.strftime("%A %d %B %Y"), day
-  %p= day.challenge
+#posts
+  - @days.each do |day|
+    .post
+      .post_image
+        = image_for_index(day)
+        -# %p= day.challenge
+      .post_content
+        .title
+          %h2= link_to day.created_at.strftime("%A %e %B %Y"), day
+        .data.clearfix
+          %p.username
+            Created by
+            = day.user.name
+        -#   %p.buttons
+        -#     %span
+        -#       %i.fa.fa-comments-o
+        -#       = pluralize(post.comments.count, "comment")
+        -#     %span
+        -#       %i.fa.fa-thumbs-o-up
+        -#       = pluralize(post.get_upvotes.size, "like")

@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160803085945) do
+ActiveRecord::Schema.define(version: 20160805124031) do
 
   create_table "days", force: :cascade do |t|
     t.string   "inspiration"
     t.string   "challenge"
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
+    t.datetime "created_at",                                            null: false
+    t.datetime "updated_at",                                            null: false
     t.datetime "date"
     t.integer  "user_id"
     t.integer  "push_up"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160803085945) do
     t.text     "insight"
     t.decimal  "kg",               precision: 5, scale: 1
     t.integer  "actual_push_ups"
+    t.string   "image_name",                               default: ""
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(version: 20160803085945) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
