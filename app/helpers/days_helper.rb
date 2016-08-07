@@ -10,7 +10,11 @@ module DaysHelper
 
   def current_day?
     @day = Day.where(user_id: current_user)
-    @day.last[:date] == Date.today
+    if @day.blank?
+      false
+    else
+      @day.last[:date] == Date.today
+    end
   end
 
 end
