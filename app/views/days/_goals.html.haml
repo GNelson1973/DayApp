@@ -1,8 +1,8 @@
 = simple_form_for(@day, html: { class: 'form-horizontal'}) do |f|
-  = f.input :date, :as => :hidden, :input_html => { :value => Date.today}
-  = f.input :challenge, label: "My Challenge For Today", input_html: { class: "form-control"}
-  = f.input :inspiration, label: "My Inspiration For Today", input_html: { class: "form-control"}
-  = f.input :kg, value: number_with_precision(f.object.kg, precision: 2), label: "Kg in 1 decimal"
+  -# = f.input :date, :as => :hidden, :input_html => { :value => Date.today}
+  -# = f.input :challenge, label: "My Challenge For Today", input_html: { class: "form-control"}
+  -# = f.input :inspiration, label: "My Inspiration For Today", input_html: { class: "form-control"}
+  -# = f.input :kg, value: number_with_precision(f.object.kg, precision: 2), label: "Kg in 1 decimal"
   = f.input :push_up, label: "Goal for no. push ups", input_html: { class: "form-control"}
   = f.input :abdominal_crunch, label: "Abdominal crunches", input_html: { class: "form-control"}
   = f.input :leg_Scissors, label: "Leg scissors", input_html: { class: "form-control"}
