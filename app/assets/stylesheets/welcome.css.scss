@@ -1,7 +1,9 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+.welcome {
+	margin-top: -6rem;
+}
 #banner {
 	background-image: url(image_path("welcome_banner_image.jpg"));
 	background-size: cover;
@@ -38,7 +40,7 @@
 	}
 	.name {
 		@include bold_font;
-		color: $dark_gray;
+		color: #afb0b0;
 		margin: 0;
 		font-size: .85rem;
 	}
@@ -50,7 +52,7 @@
 	background-repeat: no-repeat;
 	background-position: top center;
 	width: 100%;
-	min-height: 400px;
+	height: 100%;
 	display: table;
 	.callout_inner {
 		display: table-cell;
@@ -67,7 +69,7 @@
 			margin-bottom: 0;
 		}
 		p {
-			color: rgba(250, 250, 250, 0.4);
+			color: #afb0b0;
 		}
 	}
 }

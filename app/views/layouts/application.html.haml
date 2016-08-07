@@ -6,19 +6,20 @@
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true
 	= csrf_meta_tags
 %body
-	%header
-		.header_inner
-			= link_to "MyDay", root_path, id: "logo"
-			#time= Time.now.strftime("%a %b %e '%y")
-			%nav
-				- if user_signed_in?
-					= link_to "Overview", days_path
-					= link_to "Account", edit_user_registration_path
-					= link_to "Sign Out", destroy_user_session_path, method: :delete
-				- else
-					= link_to "Log In", new_user_session_path
+	- if !user_signed_in?
+		= yield
+	- else
+		%header
+			.header_inner
+				= link_to "MyDay", root_path, id: "logo"
+				#time= Time.now.strftime("%a %b %e '%y")
+				%nav
+					- if user_signed_in?
+						= link_to "Overview", days_path
+						= link_to "Account", edit_user_registration_path
+						= link_to "Sign Out", destroy_user_session_path, method: :delete
+					- else
+						= link_to "Log In", new_user_session_path
 
-	- flash.each do |name, msg|
-		= content_tag :div, msg, class: "alert alert-info"
-
-	= yield
+			- flash.each do |name, msg|
+				= content_tag :div, msg, class: "alert alert-info"

@@ -1,14 +1,9 @@
-.container
-  .col-md-8.col-md-offset-2
-    .row
-      .panel.panel-default
-        .panel-heading
-          %h2 Achievements today
-          = simple_form_for @day do |f|
-            = f.input :actual_push_ups, label: "Push ups", input_html: { class: "form-control"}
-            -# = f.input :abdominal_crunch, label: "Goal for no. abdominal crunches", input_html: { class: "form-control"}
-            -# = f.input :leg_Scissors, label: "Goal for no. leg scissors", input_html: { class: "form-control"}
-            -# = f.input :walk_run, label: "Goal for walking or running", hint: 'In minutes', input_html: { class: "form-control"}
-            -# = f.input :meditation, label: "Goal for meditation", hint: 'In minutes', input_html: { class: "form-control"}
-            -# = f.input :insight, label: "Insight", hint: 'Did you have any new insights during the day?', input_html: { class: "form-control"}
-            = f.button :submit
+= simple_form_for @day do |f|
+  = f.input :actual_push_ups, label: "Push ups", input_html: { class: "form-control"}
+  -# = f.input :abdominal_crunch, label: "Goal for no. abdominal crunches", input_html: { class: "form-control"}
+  -# = f.input :leg_Scissors, label: "Goal for no. leg scissors", input_html: { class: "form-control"}
+  -# = f.input :walk_run, label: "Goal for walking or running", hint: 'In minutes', input_html: { class: "form-control"}
+  -# = f.input :meditation, label: "Goal for meditation", hint: 'In minutes', input_html: { class: "form-control"}
+  -# = f.input :insight, label: "Insight", hint: 'Did you have any new insights during the day?', input_html: { class: "form-control"}
+  = f.button :submit, class: "btn btn-secondary"
+  = link_to "Back", day_path(@day), class: "btn btn-primary"
