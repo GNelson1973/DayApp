@@ -1,6 +1,6 @@
 
 .container {
-  margin-top: 55px;
+  margin-top: 10px;
   width: 800px;
   float: left;
 }
@@ -24,4 +24,10 @@
     line-height: 1.75;
     margin: 0;
   }
+}
+
+.form-horizontal {
+  max-width: 500px;
+  margin-left: 35px;
+  margin-right: 35px;
 }
