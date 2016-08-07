@@ -91,10 +91,8 @@ GEM
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
-    pg (0.12.2)
+    pg (0.18.4)
     pkg-config (1.1.7)
-    postgresql (1.0.0)
-      pg
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -177,8 +175,7 @@ DEPENDENCIES
   haml (~> 4.0, >= 4.0.7)
   jbuilder (~> 2.0)
   jquery-rails
-  pg
-  postgresql
+  pg (~> 0.15)
   rails (= 4.2.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
