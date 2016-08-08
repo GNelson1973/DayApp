@@ -47,7 +47,9 @@ class DaysController < ApplicationController
     def day_params
       params.require(:day).permit(
       :inspiration, :challenge, :date, :push_up, :abdominal_crunch,
-      :leg_Scissors, :kg, :meditation, :insight, :walk_run, :actual_push_ups, :image_name)
+      :leg_Scissors, :kg, :meditation, :insight, :walk_run, :actual_push_ups,
+      :meditation_actual, :abcrunch_actual, :leg_scissors_actual, :walk_run_actual,
+      :image_name)
     end
 
 end

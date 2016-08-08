@@ -7,7 +7,7 @@ class Day < ActiveRecord::Base
     extra = ( actual_push_ups - push_up )
 
     if result > 0
-      result.to_s + " todo"
+      result.to_s + " open"
     elsif result == 0
       status
     else

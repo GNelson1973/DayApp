@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160805124031) do
+ActiveRecord::Schema.define(version: 20160808120620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20160805124031) do
   create_table "days", force: :cascade do |t|
     t.string   "inspiration"
     t.string   "challenge"
-    t.datetime "created_at",                                            null: false
-    t.datetime "updated_at",                                            null: false
+    t.datetime "created_at",                                               null: false
+    t.datetime "updated_at",                                               null: false
     t.datetime "date"
     t.integer  "user_id"
     t.integer  "push_up"
@@ -29,9 +29,13 @@ ActiveRecord::Schema.define(version: 20160805124031) do
     t.integer  "walk_run"
     t.integer  "meditation"
     t.text     "insight"
-    t.decimal  "kg",               precision: 5, scale: 1
+    t.decimal  "kg",                  precision: 5, scale: 1
     t.integer  "actual_push_ups"
-    t.string   "image_name",                               default: ""
+    t.string   "image_name",                                  default: ""
+    t.integer  "meditation_actual"
+    t.integer  "abcrunch_actual"
+    t.integer  "leg_scissors_actual"
+    t.integer  "walk_run_actual"
   end
 
   create_table "users", force: :cascade do |t|

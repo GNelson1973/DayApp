@@ -30,11 +30,15 @@
       %li.menu
         %h3 Evaluations
         %ul.list-items
-          %li= " Min."
-          %li= @day.actual_push_ups.to_s + " Times"
-          %li= " Times"
-          %li= " Times"
-          %li= " Min."
+          %li= @day.meditation_actual.to_s + " Minutes"
+          %li
+            - if @day.actual_push_ups.blank? ||  @day.actual_push_ups == 0
+              No actuals yet
+            - else
+              = @day.push_up_result.to_s
+          %li= @day.abcrunch_actual.to_s + " Times"
+          %li= @day.leg_scissors_actual.to_s + " Times"
+          %li= @day.walk_run_actual.to_s + " Minutes"
           %li
             %span#button-show
               = link_to "Add Results", static_pages_results_path
@@ -42,7 +46,6 @@
   -# - if @day.actual_push_ups.blank?
   -#   Push up: No actuals yet
   -# - else
-  -#   %p= "Push up goal: " + @day.push_up.to_s + " Push up actual: " + @day.actual_push_ups.to_s + " Status: " + @day.push_up_result.to_s
   -# %p= "Abdominal Crunches- " + @day.abdominal_crunch.to_s + " Times"
   -# %p= "Insight- " + @day.insight.to_s
 

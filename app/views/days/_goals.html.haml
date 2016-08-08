@@ -1,10 +1,8 @@
-= simple_form_for(@day, html: { class: 'form-horizontal'}) do |f|
+= simple_form_for @day do |f|
   = f.input :meditation, label: "Meditation in minutes", hint: 'In minutes', input_html: { class: "form-control"}
   = f.input :push_up, label: "Push ups", input_html: { class: "form-control"}
   = f.input :abdominal_crunch, label: "Abdominal crunches", input_html: { class: "form-control"}
   = f.input :leg_Scissors, label: "Leg scissors", input_html: { class: "form-control"}
   = f.input :walk_run, label: "Walking or running in minutes", input_html: { class: "form-control"}
+  = link_to "Back", day_path(@day), class: "btn btn-primary"
   = f.button :submit
-  %br/
-  %br/
-  = link_to "Cancel", days_path
