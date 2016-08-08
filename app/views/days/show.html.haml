@@ -21,14 +21,20 @@
           %li= "Ab Crunches: " + @day.abdominal_crunch.to_s
           %li= "Ab Scissors: " + @day.leg_Scissors.to_s
           %li= "Walking or running: " + @day.walk_run.to_s
+          %li
+            %span#button-show
+              = link_to "Set Goals", static_pages_goals_path
       %li.menu
         %h3 Evaluations
         %ul.list-items
           %li= " Min."
-          %li= @day.actual_push_ups.to_s
-          %li N/A
-          %li N/A
+          %li= @day.actual_push_ups.to_s + " Times"
+          %li= " Times"
+          %li= " Times"
           %li= " Min."
+          %li
+            %span#button-show
+              = link_to "Add Results", static_pages_results_path
   -# %h4
   -# - if @day.actual_push_ups.blank?
   -#   Push up: No actuals yet
@@ -41,10 +47,8 @@
   -# = render 'actuals_form'
 #intro<
   %span#button-intro
-    = link_to "Set Goals", static_pages_goals_path
-  %span#button-intro
-    = link_to "Add Results", static_pages_results_path
-  %span#button-intro
-    = link_to "Edit", edit_day_path(@day)
+    = link_to "Update", edit_day_path(@day)
+  or
   %span#button-intro
     = link_to "Delete", day_path(@day), method: :delete, data: { confirm: "Are you sure?" }
+  Day
