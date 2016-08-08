@@ -5,7 +5,8 @@
   = f.input :image_name, label: "Inspirational picture | url only", placeholder: "add url of picture", input_html: { class: "form-control"}
   = f.input :kg, required: false, value: number_with_precision(f.object.kg, precision: 2), label: "Kg", placeholder: "e.g. 80,2"
   = f.button :submit, class: "btn btn-secondary"
-  = link_to "Back", day_path(@day), class: "btn btn-primary"
   - if !@days.blank? && Day.last[:date] == Date.today
     = link_to "Back", day_path, class: "btn btn-primary"
+  - else
+    = link_to "Back", root_path, class: "btn btn-primary"
   %br/
