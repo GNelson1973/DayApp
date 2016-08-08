@@ -3,10 +3,10 @@
     Good
     - if Time.now.hour < 12
       morning,
-    - elsif Time.now.hour > 17
-      evening,
-    - else
+    - elsif Time.now.hour < 18
       afternoon,
+    - else
+      evening,
     = current_user.name.capitalize
     \.
     %br/
@@ -19,10 +19,10 @@
     Good
     - if Time.now.hour < 12
       morning,
-    - elsif Time.now.hour > 18
-      evening,
-    - else
+    - elsif Time.now.hour < 18
       afternoon,
+    - else
+      evening,
     = current_user.name.capitalize
     \.
     %br/
