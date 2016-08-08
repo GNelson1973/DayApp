@@ -22,7 +22,7 @@
           %li= "Meditation: " + @day.meditation.to_s + " Min."
           %li= "Push ups: " + @day.push_up.to_s
           %li= "Ab Crunches: " + @day.abdominal_crunch.to_s
-          %li= "Ab Scissors: " + @day.leg_Scissors.to_s
+          %li= "Leg Scissors: " + @day.leg_Scissors.to_s
           %li= "Walking or running: " + @day.walk_run.to_s
           %li
             %span#button-show
@@ -45,13 +45,12 @@
   -#   %p= "Push up goal: " + @day.push_up.to_s + " Push up actual: " + @day.actual_push_ups.to_s + " Status: " + @day.push_up_result.to_s
   -# %p= "Abdominal Crunches- " + @day.abdominal_crunch.to_s + " Times"
   -# %p= "Insight- " + @day.insight.to_s
-  -# %br/
+
   -# .day-actuals
-  -# = render 'actuals_form'
-#update_delete<
-  %span#button-updel
-    = link_to "Update", edit_day_path(@day)
-  or
-  %span#button-updel
-    = link_to "Delete", day_path(@day), method: :delete, data: { confirm: "Are you sure?" }
-  Day
+  #update_delete<
+    %span#button-updel
+      = link_to "Update", edit_day_path(@day)
+    or
+    %span#button-updel
+      = link_to "Delete", day_path(@day), method: :delete, data: { confirm: "Are you sure?" }
+    Day
