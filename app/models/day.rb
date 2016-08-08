@@ -6,12 +6,88 @@ class Day < ActiveRecord::Base
     status = "Competed"
     extra = ( actual_push_ups - push_up )
 
-    if result > 0
-      result.to_s + " open"
-    elsif result == 0
-      status
+    if actual_push_ups.blank? || actual_push_ups == 0
+      " No actuals yet"
     else
-      extra.to_s + " extra! Champ!!"
+      if result > 0
+        result.to_s + " Left"
+      elsif result == 0
+        status
+      else
+        extra.to_s + " Extra! Champ!!"
+      end
+    end
+  end
+
+  def meditation_result
+    result = (meditation - meditation_actual)
+    status = "Competed"
+    extra = (meditation_actual - meditation)
+
+    if meditation_actual.blank? || meditation_actual == 0
+      " No actuals yet"
+    else
+      if result > 0
+        result.to_s + " Left"
+      elsif result == 0
+        status
+      else
+        extra.to_s + " Extra!"
+      end
+    end
+  end
+
+  def abcrunch_result
+    result = (abdominal_crunch - abcrunch_actual)
+    status = "Competed"
+    extra = (abcrunch_actual - abdominal_crunch)
+
+    if abcrunch_actual.blank? || abcrunch_actual == 0
+      " No actuals yet"
+    else
+      if result > 0
+        result.to_s + " Left"
+      elsif result == 0
+        status
+      else
+        extra.to_s + " Extra!"
+      end
+    end
+  end
+
+  def scissors_result
+    result = (leg_Scissors - leg_scissors_actual)
+    status = "Competed"
+    extra = (leg_scissors_actual - leg_Scissors)
+
+    if leg_scissors_actual.blank? || leg_scissors_actual == 0
+      " No actuals yet"
+    else
+      if result > 0
+        result.to_s + " Left"
+      elsif result == 0
+        status
+      else
+        extra.to_s + " Extra!"
+      end
+    end
+  end
+
+  def walk_run_result
+    result = (walk_run - walk_run_actual)
+    status = "Competed"
+    extra = (walk_run_actual - walk_run)
+
+    if walk_run_actual.blank? || walk_run_actual == 0
+      " No actuals yet"
+    else
+      if result > 0
+        result.to_s + " Left"
+      elsif result == 0
+        status
+      else
+        extra.to_s + " Extra!"
+      end
     end
   end
 
