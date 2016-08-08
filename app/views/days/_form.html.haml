@@ -1,10 +1,11 @@
-= simple_form_for(@day, html: { class: 'form-horizontal'}) do |f|
+= simple_form_for @day do |f|
   = f.input :date, :as => :hidden, :input_html => { :value => Date.today}
   = f.input :challenge, label: "My Challenge For Today", input_html: { class: "form-control"}
   = f.input :inspiration, label: "My Inspiration For Today", input_html: { class: "form-control"}
   = f.input :image_name, label: "Inspirational picture | url only", placeholder: "add url of picture", input_html: { class: "form-control"}
   = f.input :kg, required: false, value: number_with_precision(f.object.kg, precision: 2), label: "Kg", placeholder: "e.g. 80,2"
   = f.button :submit, class: "btn btn-secondary"
+  = link_to "Back", day_path(@day), class: "btn btn-primary"
   - if !@days.blank? && Day.last[:date] == Date.today
     = link_to "Back", day_path, class: "btn btn-primary"
   %br/
