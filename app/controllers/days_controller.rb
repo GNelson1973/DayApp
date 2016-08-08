@@ -35,7 +35,7 @@ class DaysController < ApplicationController
 
   def destroy
     @day.destroy
-    redirect_to days_path
+    redirect_to root_path
   end
 
   private
