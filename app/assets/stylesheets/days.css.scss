@@ -152,3 +152,29 @@
 		}
 	}
 }
+
+#update_delete {
+	font-size: 4.25rem;
+	// line-height: 2.5;
+  margin-top: 150px;
+	span {
+		font-size: 80%;
+		color: #9B9B9B;
+	}
+  #button-updel {
+  	line-height: 3.5;
+    border: 1.75px solid #9B9B9B;
+    padding: .7rem 1.25rem;
+    border-radius: 1rem;
+    text-align: center;
+    background: white;
+    color: #9B9B9B;
+    a {
+    	color: #9B9B9B;
+    	text-decoration: none;
+    	&:hover {
+    		color: #9B9B9B;
+    	}
+    }
+  }
+}

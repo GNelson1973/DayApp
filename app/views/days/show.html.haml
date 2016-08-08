@@ -48,10 +48,10 @@
   -# %br/
   -# .day-actuals
   -# = render 'actuals_form'
-#intro<
-  %span#button-intro
+#update_delete<
+  %span#button-updel
     = link_to "Update", edit_day_path(@day)
   or
-  %span#button-intro
+  %span#button-updel
     = link_to "Delete", day_path(@day), method: :delete, data: { confirm: "Are you sure?" }
   Day
