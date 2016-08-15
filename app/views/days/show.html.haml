@@ -30,15 +30,11 @@
       %li.menu
         %h3 Evaluations
         %ul.list-items
-          %li= @day.meditation_actual.to_s + " Minutes"
-          %li
-            - if @day.actual_push_ups.blank? ||  @day.actual_push_ups == 0
-              No actuals yet
-            - else
-              = @day.push_up_result.to_s
-          %li= @day.abcrunch_actual.to_s + " Times"
-          %li= @day.leg_scissors_actual.to_s + " Times"
-          %li= @day.walk_run_actual.to_s + " Minutes"
+          %li= @day.meditation_result.to_s
+          %li= @day.push_up_result.to_s
+          %li= @day.abcrunch_result.to_s
+          %li= @day.scissors_result.to_s
+          %li= @day.walk_run_result.to_s
           %li
             %span#button-show
               = link_to "Add Results", static_pages_results_path
