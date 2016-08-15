@@ -1,9 +1,9 @@
 class DaysController < ApplicationController
+  load_and_authorize_resource
   before_action :find_day, only: [:show, :edit, :update, :destroy]
 
   def index
     @days = Day.where(user_id: current_user).order("created_at DESC")
-    # authorize! :read, @days
   end
 
   def show
