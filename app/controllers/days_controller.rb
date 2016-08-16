@@ -50,6 +50,10 @@ class DaysController < ApplicationController
       redirect_to root_path, notice: "You are not authorized for this page" unless @day.user_id == current_user.id
     end
 
+    def authenticate_user!
+      redirect_to new_user_session_path, notice: "You must login or signup first" unless user_signed_in?
+    end
+
     def day_params
       params.require(:day).permit(
       :inspiration, :challenge, :date, :push_up, :abdominal_crunch,
