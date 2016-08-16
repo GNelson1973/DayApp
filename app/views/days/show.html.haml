@@ -30,11 +30,11 @@
       %li.menu
         %h3 Evaluations
         %ul.list-items
-          -# %li= @day.meditation_result.to_s
-          -# %li= @day.push_up_result.to_s
-          -# %li= @day.abcrunch_result.to_s
-          -# %li= @day.scissors_result.to_s
-          -# %li= @day.walk_run_result.to_s
+          %li= @day.meditation_result.to_s
+          %li= @day.push_up_result.to_s
+          %li= @day.abcrunch_result.to_s
+          %li= @day.scissors_result.to_s
+          %li= @day.walk_run_result.to_s
           %li
             %span#button-show
               = link_to "Add Results", static_pages_results_path
