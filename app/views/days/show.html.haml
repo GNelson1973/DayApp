@@ -19,22 +19,22 @@
       %li.menu
         %h3 Goals
         %ul.list-items
-          %li= "Meditation: " + @day.meditation.to_s + " Min."
+          %li= "Meditation min.: " + @day.meditation.to_s
           %li= "Push ups: " + @day.push_up.to_s
           %li= "Ab Crunches: " + @day.abdominal_crunch.to_s
           %li= "Leg Scissors: " + @day.leg_Scissors.to_s
-          %li= "Walking or running: " + @day.walk_run.to_s
+          %li= "Walk or run min.: " + @day.walk_run.to_s
           %li
             %span#button-show
               = link_to "Set Goals", static_pages_goals_path
       %li.menu
         %h3 Evaluations
         %ul.list-items
-          %li= @day.meditation_result.to_s
-          %li= @day.push_up_result.to_s
-          %li= @day.abcrunch_result.to_s
-          %li= @day.scissors_result.to_s
-          %li= @day.walk_run_result.to_s
+          %li= "" + @day.meditation.to_s + " - " + @day.meditation_actual.to_s + " = " + @day.meditation_result.to_s
+          %li= "" + @day.push_up.to_s + " - " + @day.actual_push_ups.to_s + " = " + @day.push_up_result.to_s
+          %li= "" + @day.abdominal_crunch.to_s + " - " + @day.abcrunch_actual.to_s + " = " + @day.abcrunch_result.to_s
+          %li= "" + @day.leg_Scissors.to_s + " - " + @day.leg_scissors_actual.to_s + " = " + @day.scissors_result.to_s
+          %li= "" + @day.walk_run.to_s + " - " + @day.walk_run_actual.to_s + " = " + @day.walk_run_result.to_s
           %li
             %span#button-show
               = link_to "Add Results", static_pages_results_path
