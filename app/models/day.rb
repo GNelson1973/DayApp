@@ -4,6 +4,8 @@ class Day < ActiveRecord::Base
   def meditation_result
     if meditation_actual.blank? || meditation_actual == 0
       " No actuals yet"
+    elsif meditation.blank? || meditation == 0
+      " No goals set"
     else
       result = (meditation - meditation_actual)
       status = "Competed"
@@ -22,6 +24,8 @@ class Day < ActiveRecord::Base
   def push_up_result
     if actual_push_ups.blank? || actual_push_ups == 0
       " No actuals yet"
+    elsif meditation.blank? || meditation == 0
+      " No goals set"
     else
       result = (push_up - actual_push_ups)
       status = "Competed"
@@ -40,6 +44,8 @@ class Day < ActiveRecord::Base
   def abcrunch_result
     if abcrunch_actual.blank? || abcrunch_actual == 0
       " No actuals yet"
+    elsif meditation.blank? || meditation == 0
+      " No goals set"
     else
       result = (abdominal_crunch - abcrunch_actual)
       status = "Competed"
@@ -58,6 +64,8 @@ class Day < ActiveRecord::Base
   def scissors_result
     if leg_scissors_actual.blank? || leg_scissors_actual == 0
       " No actuals yet"
+    elsif meditation.blank? || meditation == 0
+      " No goals set"
     else
       result = (leg_Scissors - leg_scissors_actual)
       status = "Competed"
@@ -76,6 +84,8 @@ class Day < ActiveRecord::Base
   def walk_run_result
     if walk_run_actual.blank? || walk_run_actual == 0
       " No actuals yet"
+    elsif meditation.blank? || meditation == 0
+      " No goals set"
     else
       result = (walk_run - walk_run_actual)
       status = "Competed"
